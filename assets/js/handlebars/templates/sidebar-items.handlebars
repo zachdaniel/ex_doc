@@ -64,7 +64,13 @@
             <ul id="node-{{node.id}}-group-{{group.key}}-list" class="{{group.key}}-list deflist">
               {{#each group.nodes}}
                 <li>
-                  <a href="{{node.id}}.html#{{anchor}}" title="{{title}}" translate="no">{{id}}</a>
+                  <a href="{{node.id}}.html#{{anchor}}" title="{{title}}" translate="no">
+                    {{#if title}}
+                      {{title}}
+                    {{else}}
+                      {{id}}
+                    {{/if}}
+                  </a>
                 </li>
               {{/each}}
             </ul>
